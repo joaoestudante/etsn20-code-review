@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Usage: search <pattern> <full path to file>");
+        Scanner scan = new Scanner(System.in);
         String command = "";
-        while (!command.equals("exit")) {
-            Scanner scan = new Scanner(System.in);
-            command = scan.nextLine();
+        while (scan.hasNextLine()) {
+        	command = scan.nextLine();
             String[] commandParts = command.split(" ");
 
             if (commandParts.length != 3) {
